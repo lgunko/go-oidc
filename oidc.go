@@ -135,6 +135,10 @@ func NewProvider(ctx context.Context, issuer string) (*Provider, error) {
 	}, nil
 }
 
+func (p *Provider) Issuer() string {
+	return p.issuer
+}
+
 // Claims unmarshals raw fields returned by the server during discovery.
 //
 //    var claims struct {
